@@ -1,4 +1,3 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroUI provides the basis for configuring the AstroNvim User Interface
 -- Configuration documentation can be found with `:h astroui`
@@ -10,16 +9,12 @@ return {
   "AstroNvim/astroui",
   ---@type AstroUIOpts
   opts = {
-    -- change colorscheme
-    colorscheme = "onedarkpro-dark", -- используем one dark pro тему
+    -- change colorscheme - теперь управляется отдельно
+    -- colorscheme = "astrodark", -- временно используем стандартную тему
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- this table overrides highlights in all themes
         -- Normal = { bg = "#000000" },
-      },
-      -- настройки подсветки для one dark pro
-      ["onedarkpro-dark"] = {
-        -- можно добавить специфичные настройки для темы
       },
     },
     -- Icons can be configured throughout the interface

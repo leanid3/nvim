@@ -1,20 +1,7 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
--- AstroCommunity: import any community modules here
--- We import this file in `lazy_setup.lua` before the `plugins/` folder.
--- This guarantees that the specs are processed before any user plugins.
+-- AstroCommunity: AstroNvim User Configurable Community Maintained Modules
+-- This file is populated with a default configuration of commonly used community modules.
+-- See the full repository of community modules at https://github.com/AstroNvim/astrocommunity
+-- This file is automatically loaded by AstroNvim when plugins are enabled
 
 ---@type LazySpec
-return {
-  "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.lua" },
-
-  { import = "astrocommunity.pack.docker" },
-  { import = "astrocommunity.pack.yaml" },
-  { import = "astrocommunity.pack.toml" },
-  -- program language
-  { import = "astrocommunity.pack.go" },
-  -- git
-  -- { import = "astrocommunity.git.lazygit" },
-  -- import/override with your plugins folder
-}
+return {}
