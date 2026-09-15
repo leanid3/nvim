@@ -1,4 +1,3 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- PLEASE REMOVE THE EXAMPLES YOU HAVE NO INTEREST IN BEFORE ENABLING THIS FILE
@@ -83,6 +82,25 @@ return {
         -- disable for .vim files, but it work for another filetypes
         Rule("a", "a", "-vim")
       )
+    end,
+  },
+
+  -- 1. Сначала подключаем сам репозиторий AstroCommunity
+  {
+    "AstroNvim/astrocommunity",
+    -- Это гарантирует, что репозиторий скачается до того, как мы попробуем взять оттуда Go
+    lazy = false, 
+  },
+
+  -- 2. Теперь безопасно импортируем пакет для Golang
+  { import = "astrocommunity.pack.go" },
+
+  -- 3. Наш старый фикс для aerial.nvim, чтобы не сыпались ошибки
+  {
+    "stevearc/aerial.nvim",
+    opts = function(_, opts)
+      opts.backends = { "lsp", "markdown", "asciidoc", "man" }
+      return opts
     end,
   },
 }
